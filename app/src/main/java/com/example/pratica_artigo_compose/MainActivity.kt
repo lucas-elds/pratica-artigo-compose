@@ -26,24 +26,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             PraticaartigocomposeTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                    TelaCompose()
-                }
+                TelaCompose()
             }
         }
     }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
 }
 
 @Composable
@@ -77,8 +63,8 @@ fun TelaCompose() {
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun TelaComposePreview() {
     PraticaartigocomposeTheme {
-        Greeting("Android")
+        TelaCompose()
     }
 }
